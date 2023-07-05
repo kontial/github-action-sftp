@@ -1,0 +1,30 @@
+name: "Kontial SFTP Deploy"
+description: "Deploy by SFTP."
+branding:
+  icon: upload-cloud
+  color: blue
+runs:
+  using: "docker"
+  image: "Dockerfile"
+inputs:
+  server:
+    description: "Host"
+    required: true
+  port:
+    description: "SFTP port (default 22)"
+    required: false
+    default: "22"
+  user:
+    description: "user"
+    required: true
+  password:
+    description: "SFTP password"
+    required: true
+  local:
+    description: "Local path (default .)"
+    required: false
+    default: ./
+  remote:
+    description: "Remote path (default .)"
+    required: false
+    default: ./

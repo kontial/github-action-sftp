@@ -14,7 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: SFTP
-        uses: kontial/github-sftp@v1.0
+        uses: kontial/github-action-sftp@v1.0
         with:
           server: domain.com
           user: username
